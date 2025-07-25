@@ -1,8 +1,9 @@
 # c:/Users/Nicolas/Desktop/playwright_project/tests/main.py
-
+from tkinter import *
+import customtkinter as ctk
 from playwright.sync_api import Page # Para type hinting
 import time
-from classe_redacao import dados_redacao,salvar_redacao_excel
+from classe_redacao import dados_redacao,salvar_redacao_banco
 import pandas as pd
 # CORREÇÃO: Importação da classe e função de verificação.
 # Assumindo que 'gerenciador_perfil.py' está na pasta raiz do projeto,
@@ -14,6 +15,12 @@ from gerenciador_perfil import PlaywrightBrowser, verificar_chrome_fechado_manua
 from cria_codigo import automacao_cria
 from coredacao import automacao_coredacao
 from toda_materia_codigo import automacao_toda_materia
+
+
+
+
+
+
 # --- Bloco de execução principal ---
 if __name__ == "__main__":
     # 1. Chamar a função de verificação (agora com parênteses!)
@@ -37,13 +44,11 @@ if __name__ == "__main__":
         print("\nResultado da automação Cria.net.br:", resultado_cria)
 
         
-
-
         resultado_coredacao = automacao_coredacao(page=page,texto=dados_redacao['TEXTO_REDACAO'],titulo=dados_redacao['TITULO'])
-
-        #resultado_toda_materia = automacao_toda_materia(page=page,texto=dados_redacao['TEXTO_REDACAO'],tema=dados_redacao['TEMA'],titulo=dados_redacao['TITULO'])
-
-        salvar_redacao_excel(dados_redacao=dados_redacao,modo="sobreescrever")
+        
+        resultado_toda_materia = automacao_toda_materia(page=page,texto=dados_redacao['TEXTO_REDACAO'],tema=dados_redacao['TEMA'],titulo=dados_redacao['TITULO'])
+        print(dados_redacao)
+        #salvar_redacao_banco(dados_redacao=dados_redacao)
         
 
         # --- AQUI VOCÊ PODE CHAMAR OUTRAS FUNÇÕES DE AUTOMAÇÃO ---

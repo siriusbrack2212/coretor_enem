@@ -2,7 +2,7 @@
 
 from playwright.sync_api import Page, expect # Importa Page para type hinting e expect para asserções
 import time
-from classe_redacao import atualizar_campo_redacao,dados_redacao,contador
+from classe_redacao import atualizar_campo_redacao,dados_redacao
 import pandas as pd
 from datetime import date
 
