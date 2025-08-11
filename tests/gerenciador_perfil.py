@@ -117,7 +117,7 @@ class PlaywrightBrowser:
         if not self._playwright_context:
             raise Exception("Contexto do navegador não iniciado. Chame .launch() primeiro.")
         new_page_instance = self._playwright_context.new_page()
-        new_page_instance.set_viewport_size({"width": 1920, "height": 1080})
+        new_page_instance.set_viewport_size({"width": 1377, "height": 1058})
         return new_page_instance
 
     def close(self):

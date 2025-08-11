@@ -48,7 +48,7 @@ if __name__ == "__main__":
         
         resultado_toda_materia = automacao_toda_materia(page=page,texto=dados_redacao['TEXTO_REDACAO'],tema=dados_redacao['TEMA'],titulo=dados_redacao['TITULO'])
         print(dados_redacao)
-        #salvar_redacao_banco(dados_redacao=dados_redacao)
+        salvar_redacao_banco(dados_redacao=dados_redacao)
         
 
         # --- AQUI VOCÊ PODE CHAMAR OUTRAS FUNÇÕES DE AUTOMAÇÃO ---
