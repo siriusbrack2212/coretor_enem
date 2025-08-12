@@ -1,0 +1,43 @@
+# Ignorar diretórios de cache e ambientes virtuais
+__pycache__/
+venv/
+.venv/
+
+# Ignorar arquivos de banco de dados
+*.db
+*.sqbpro
+
+# Ignorar arquivos de dados gerados (se tb_redacoes.xlsx for gerado)
+tb_redacoes.xlsx
+
+# Ignorar arquivos de log e erro
+*.log
+*.err
+fatal_error_main_script.png
+
+# Ignorar arquivos de configuração de IDEs e editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar arquivos de sistema operacional
+.DS_Store
+thumbs.db
+
+# Ignorar arquivos de dependências (se não forem parte do projeto)
+node_modules/
+
+# Ignorar arquivos de pacotes Python
+*.egg-info/
+build/
+dist/
+
+# Ignorar arquivos de testes (se houver relatórios ou saídas)
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ignorar arquivos de dados sensíveis ou temporários
+*.env
+.env.local
